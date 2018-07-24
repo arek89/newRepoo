@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="../build/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="price">
+                <h1>Price: $99.99</h1>
+            </div>
+            <div class="card__container">
+                <div class="card">
+                    <!--<div class="row product">-->
+                        <!--&lt;!&ndash;<div class="left">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<input id="pp" type="radio" name="payment" />&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="radio"></div>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<label for="pp">Paypal</label>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="right">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<img src="http://i68.tinypic.com/2rwoj6s.png" alt="paypal" />&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                    <div class="row credit">
+                        <div class="left">
+                            <!--<input id="cd" type="radio" name="payment" />-->
+                            <div class="radio"></div>
+                            <label for="cd">Debit/ Credit Card</label>
+                        </div>
+                        <div class="right">
+                            <img src="./assets/visa.png" alt="visa" />
+                            <img src="./assets/mastercard.png" alt="mastercard" />
+                            <img src="./assets/amex.png" alt="amex" />
+                            <img src="./assets/maestro.png" alt="maestro" />
+                        </div>
+                    </div>
+                    <div class="row cardholder">
+                        <div class="info">
+                            <label for="cardHolderName">Name</label>
+                            <input
+                                placeholder="e.g. Richard Bovell"
+                                id="cardHolderName"
+                                type="text"
+                                required/>
+                        </div>
+                    </div>
+                    <div class="row number">
+                        <div class="info">
+                            <label for="cardNumber">Card number</label>
+                            <input
+                                id="cardNumber"
+                                type="number"
+                                pattern="[0-9]{16,19}"
+                                maxlength="19"
+                                placeholder="8888-8888-8888-8888"
+                                required/>
+                        </div>
+                    </div>
+                    <div class="row details">
+                        <div class="left expiry">
+                            <label for="month">Expiry</label>
+                            <select id="month" required>
+                                <option value="">MM</option>
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <span>/</span>
+                            <select id="year" required>
+                                <option value="">YYYY</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </div>
+                        <div class="right cvv">
+                            <label for="cvv">CVC/CVV</label>
+                            <input
+                                id="cvv"
+                                type="number"
+                                maxlength="4"
+                                placeholder="123"
+                                required/>
+                            <span class="hidden-sm-down" data-balloon-length="medium" data-balloon="The 3 or 4-digit number on the back of your card." data-balloon-pos="up">i</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit" onclick="onSubmit()"><i class="ion-locked"></i> Confirm and Pay</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../build/app.js"></script>
+</body>
+</html>
